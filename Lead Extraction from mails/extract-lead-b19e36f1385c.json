@@ -1,0 +1,21 @@
+{
+  "type": "service_account",
+  "project_id": "extract-lead",
+  "private_key_id": "b19e36f1385c097075d2ac372c8e63ca0a793550",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC1SsofoeChlwFh\neWL8Ccb1YsOOsB9zuMUDXuzogKCqJIy39vzXZzX7jpz34vOIGTiA7ksIV6CaKrfq\nlxAHNmrRcv4ZE9uZiMEsuP7QvHrKgU74HNjuz83PEnmfbqAiFNURtAmAtJSiA8WV\noRryJ38eMh/N+3UMbGq74mEQeoPYo0Sl9Gp+JsQqlQR2U+PJwsEWAys05/1V8zmz\nmjE0UEGUPs0T5JUzD7D9E842N3gSl2CstiSZeJH1wNz3V+LMJATyXEip7679+518\ns8duGEB1xpauwdYdVv2nlB4gBXwfEE+EXXN0clDQgeX5unVYiCp3u3ovffUtHtTM\nbdtYdUfrAgMBAAECggEAEZWSNFSnU26wdhibI5CWAtNURFQZJ0hqzf0x/aOlGDIY\nw6rW8tR/SNaYEan3boiC6zjxzMdySItplzBiBoKrN4SWJXvzgJliPBwqrx43ZMph\n2Zczg9P8UoaOugpo/G7iQDTWK4ZlPxYeXvlagglkGMHKeIuLp167g/ZpufqM+YEQ\nPcAiYsUKxg95E30B29szZ8x1O5M0DkfwKc6KG8W0qDzPyBoTPEjkHU0sxlRzEQ2j\nBE8Y2wSNoBno+8Df2MOH0R4m1zDweaTJZrbeLZJ6MjKo14REcIbBsXmnite/2A7Q\ncRYFihwV68hImHFS6Nnnjsm6Z5HLQmY/xpuw+ZgOtQKBgQDqkh+4LfKXfITI9TZY\ncj5t6L/hUw1fdxFNLbSEyNRmQvz1fyoOryveP/2SkYej3SJaQV8ORnlRkx/3ZoSq\nsxoF8cRbRRcwHlDJUoyhirJ2FvW/N28Uq4AKXNQOBlAG9t72vJB0XcGxp+2x8aDd\nA5bXVS0GZXPwhEjmfSX8RpbK5QKBgQDF2qUZ37CAf7lZ5kjX5rtAAtt/RB8SEcVj\nm17N7yNSDhV/ULTE3dyQ7f+JUAZrPhdmncXYkd6+8HZyNvqY+MDnAIOhtUlmnDdr\nC6CsrLF74FV2Ga5s9Aty4ccz1px3D8TpxwdtPqGTHksLkJc08LtseH+bsPcufaSi\nZdazz0kKjwKBgGEeSt+4tl4eAeQqEmwgMNTUrs0d08WYyKMJr1nixH3qck06bzFR\nOXp1SAltE5m2rshrlG2WpBgwL+YAniEGslmPtdqMCoOzqYMRGISxph3ad7jJvMX0\nE7k2od2Eo5GemMXTYIOtZcqmWnV4M0AOgl95NoEVdCE6w+waGKYQm9I5AoGASBuo\nomZpAFwMZFxOXglkYy7nalmcbUx2wRemFK28FLK3WQBD8Z/ePB/RSu0Uec9WXfrQ\nWV7IbJRcxsGM0WWPgGEqmCvnBXOXqvbA503FHZ2j5/fyHxlOdt8cZ6MmwSnJHV6B\nMWprHqAiv6NByHSYCi9capSzcYkvEFTHTB8WwrcCgYAtTz3S9V8EAQp+hS4Fjwmo\n4oZiD5TacIufr/r4jpMnxhPV5JbUs+OH8+u5rapJ5Qq+2AgwQsmB1Yijsk01tw25\nRxlXdHkUGOrhy+NR4r7Bx4d5rgssciOXd1NAMWSrJrW5NRhjJSnqVNfomQntUD4h\n6fE23kTCpxmT48M13LF+bQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "omkar-452@extract-lead.iam.gserviceaccount.com",
+  "client_id": "104285966180527718173",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/omkar-452%40extract-lead.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com",
+  "installed":{"client_id":"964142008207-g16i1mjt1btfl00eklgtptppf4c3dhv0.apps.googleusercontent.com",
+  "project_id":"extract-lead",
+  "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+  "token_uri":"https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+  "client_secret":"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",
+  "redirect_uris":["http://localhost"]}
+}
+
