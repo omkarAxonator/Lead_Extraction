@@ -1,0 +1,9 @@
+{
+    "Username": "Janhavi@axonator.com",
+    "Password": "Axonator@123",
+    "chrome_exe_path":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "chrome_debug_path" : "C:\\Users\\user\\ChromeDebug",
+    "debugging_port" : 9222,
+    "Start_Page": 101,
+    "end_page": 100
+}

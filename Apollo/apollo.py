@@ -10,6 +10,8 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from datetime import date
 import csv
 import os
+import subprocess
+import json
 
 # Function to get ordinal suffix for a day
 def get_ordinal_suffix(day):
@@ -40,6 +42,36 @@ def get_file_path():
     file_path = os.path.join(folder_name, csv_file)
     return file_path
 
+def read_file(file_path):
+    with open(file_path, 'r') as file:
+        return file.read()
+    
+def write_file(file_path,file_content):
+    with open(file_path, 'w') as file :
+        file.write(file_content)
+
+config_file = 'Config.json'
+config = read_file(config_file)
+config_json = json.loads(config)
+Start_Page = config_json['Start_Page']
+end_page = config_json['end_page']
+chrome_exe_path = config_json['chrome_exe_path']
+chrome_debug_path = config_json['chrome_debug_path']
+debugging_port = config_json['debugging_port']
+
+# Launch Chrome in debugging mode (PowerShell-compatible command)
+run_chrome_in_debugging = [
+    "powershell.exe",
+    "-Command",
+    rf"& '{chrome_exe_path}' --remote-debugging-port={debugging_port} --user-data-dir='{chrome_debug_path}'"
+]
+
+print("Launching Chrome in debugging mode...")
+subprocess.Popen(run_chrome_in_debugging)
+
+# Wait for Chrome to launch
+time.sleep(5)
+
 # Set up Selenium and the web driver
 service = Service(ChromeDriverManager().install())
 
@@ -53,7 +85,7 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 # Define login details and URLs
 filter_url = 'https://app.apollo.io/#/people?page=1&personLocations[]=United%20States&sortAscending=false&sortByField=%5Bnone%5D&organizationIndustryTagIds[]=5567cdde73696439812c0000&organizationIndustryTagIds[]=5567ce2773696454308f0000&personTitles[]=facility%20manager&personTitles[]=facilities%20director'
 file_path = get_file_path()
-file_exists = os.path.exists(file_path)  # Check if the file exists
+
 
 # Step 1: Open the login page
 driver.get(filter_url)
@@ -74,7 +106,7 @@ except TimeoutException:
 
 
 # Step 5: Extract data from rows
-for page in range(65, 66):  # Adjust range as needed
+for page in range(Start_Page, end_page+1):  # Adjust range as needed
     print(f"\nStarted Page : {page}")
     try:
         # Re-locate the rows container after each page change
@@ -127,6 +159,7 @@ for page in range(65, 66):  # Adjust range as needed
                 
 
                 with open(file_path, mode='a', newline='', encoding='utf-8') as file:
+                    file_exists = os.path.exists(file_path)  # Check if the file exists
                     writer = csv.DictWriter(file, fieldnames=["Name", "Title", "Company Name", "City", "State", "linkedin_link","Employee_Size"])
                     if not file_exists:
                         writer.writeheader()  # Write the header only if the file does not exist
@@ -141,6 +174,12 @@ for page in range(65, 66):  # Adjust range as needed
         print(f"No rows found on page {page}.")
     
     print(f"Completed {page} !!!!")
+    config_json['Start_Page'] = page + 1
+    # Convert the updated dictionary to JSON string
+    updated_config = json.dumps(config_json, indent=4)
+    write_file(config_file,updated_config)
+    if Start_Page == end_page :
+        break
     time.sleep(60)
 
 print(f"Data extraction complete. Records have been appended to {file_path}")
